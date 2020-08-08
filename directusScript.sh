@@ -8,9 +8,8 @@ a2dissite 000-default.conf
 cp /directus/directus/directus.conf /etc/apache2/sites-available/
 echo "Include "/etc/apache2/sites-available/directus.conf"" >> /etc/apache2/apache2.conf
 a2ensite directus.conf
-cd /var/www
-rm -rf *
-wget https://github.com/MAXPOL/directus/blob/master/directus.zip
+rm -rf /var/www/*
+cp /directus/directus/directus.zip /var/www/
 unzip directus.zip
 a2enmod rewrite
 cd directus
