@@ -5,8 +5,7 @@ systemctl enable mariadb
 systemctl start apache2
 systemctl start mariadb
 a2dissite 000-default.conf
-cd /etc/apache2/sites-available/
-wget https://github.com/MAXPOL/directus/blob/master/directus.conf
+cp /directus/directus/directus.conf /etc/apache2/sites-available/
 a2ensite directus.conf
 cd /var/www
 rm -rf *
