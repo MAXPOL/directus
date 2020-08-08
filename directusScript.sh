@@ -1,5 +1,5 @@
 #!/bin/bash
-apt-get install -y apache2 mariadb-server php php-gd php-curl php-mbstring php-mysql php-mysql nano wget zip unzip composer
+apt-get install -y apache2 mariadb-server php php-gd php-curl php-mbstring php-mysql php-pdo php-fileinfo php-mysql nano wget zip unzip composer
 systemctl enable apache2
 systemctl enable mariadb
 systemctl start apache2
@@ -10,6 +10,7 @@ echo "Include "/etc/apache2/sites-available/directus.conf"" >> /etc/apache2/apac
 a2ensite directus.conf
 rm -rf /var/www/*
 cp /directus/directus/directus.zip /var/www/
+cd /var/www/
 unzip directus.zip
 a2enmod rewrite
 cd directus
