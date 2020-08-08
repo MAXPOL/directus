@@ -1,5 +1,5 @@
 #!/bin/bash
-apt-get install -y apache2 mariadb-server php php-gd php-curl php-mbstring php-mysql php-mysql nano wget zip unzip compose
+apt-get install -y apache2 mariadb-server php php-gd php-curl php-mbstring php-mysql php-mysql nano wget zip unzip composer
 systemctl enable apache2
 systemctl enable mariadb
 systemctl start apache2
