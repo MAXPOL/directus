@@ -6,6 +6,7 @@ systemctl start apache2
 systemctl start mariadb
 a2dissite 000-default.conf
 cp /directus/directus/directus.conf /etc/apache2/sites-available/
+echo "Include "/etc/apache2/sites-available/directus.conf"" >> /etc/apache2/apache2.conf
 a2ensite directus.conf
 cd /var/www
 rm -rf *
