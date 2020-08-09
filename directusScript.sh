@@ -24,3 +24,4 @@ mysql -u root -p -e "create database sdb;"
 chmod -R 0777 /var/www/directus
 chown -R www-data:www-data /var/www/directus
 systemctl restart mariadb
+reboot
