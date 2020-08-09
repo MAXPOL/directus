@@ -15,13 +15,12 @@ unzip directus.zip
 a2enmod rewrite
 cd directus
 composer install
-cd migrations\install
+cd /var/www/directus/migrations/install
 sed -i 's/'"'limit'"' => 255,/'"'limit'"' => 190,/g' 20180220023152_create_collections_presets_table.php
 cd /
 mysql_secure_installation
 mysql -u root -p -e "use mysql; update user set plugin='' where user='root';"
 mysql -u root -p -e "create database sdb;"
-cd /var/www
-chmod -R 0777 directus
-chown -R www-data:www-data directus
+chmod -R 0777 /var/www/directus
+chown -R www-data:www-data /var/www/directus
 systemctl restart mariadb
