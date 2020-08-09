@@ -21,3 +21,6 @@ cd /
 mysql_secure_installation
 mysql -u root -p -e "use mysql; update user set plugin='' where user='root';"
 mysql -u root -p -e "create database sdb;"
+cd /var/www
+chmod -R 0777 directus
+chown -R www-data:www-data directus
