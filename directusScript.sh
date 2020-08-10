@@ -5,11 +5,11 @@ systemctl enable apache2
 systemctl start apache2
 #systemctl start mariadb #Uncomment if you want use internal database
 a2dissite 000-default.conf
-cp /directus/directus/directus.conf /etc/apache2/sites-available/
+cp /directus/directus.conf /etc/apache2/sites-available/
 echo "Include "/etc/apache2/sites-available/directus.conf"" >> /etc/apache2/apache2.conf
 a2ensite directus.conf
 rm -rf /var/www/*
-cp /directus/directus/directus.zip /var/www/
+cp /directus/directus.zip /var/www/
 cd /var/www/
 unzip directus.zip
 a2enmod rewrite
