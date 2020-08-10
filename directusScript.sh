@@ -13,6 +13,7 @@ cp /directus/directus.zip /var/www/
 cd /var/www/
 unzip directus.zip
 a2enmod rewrite
+a2enmod ssl
 cd directus
 composer install
 cd /var/www/directus/migrations/install
