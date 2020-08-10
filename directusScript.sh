@@ -23,5 +23,5 @@ cd /
 #mysql -u root -p -e "create database sdb;" #Uncomment if you want use internal database
 chmod -R 0777 /var/www/directus
 chown -R www-data:www-data /var/www/directus
-systemctl restart mariadb
-reboot
+#systemctl restart mariadb #Uncomment if you want use internal database
+#reboot
